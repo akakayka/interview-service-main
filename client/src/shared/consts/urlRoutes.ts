@@ -3,7 +3,7 @@ export enum UrlRoutes {
     compiler = '/',
     user = '/api',
     client = '/',
-    tracker = '/api/v1.0/tracker',
+    tracker = '/v1.0/tracker/',
     signal = '/signalrtc',
     notification = '/notificationHub',
 
