@@ -1,0 +1,11 @@
+output "k8s_cluster_id" {
+  value = yandex_kubernetes_cluster.coderev_cluster.id
+}
+
+output "k8s_cluster_external_endpoint" {
+  value = yandex_kubernetes_cluster.coderev_cluster.master[0].external_v4_endpoint
+}
+
+output "container_registry_id" {
+  value = yandex_container_registry.coderev_registry.id
+}

@@ -1,0 +1,89 @@
+# ===== VPC Network =====
+resource "yandex_vpc_network" "network" {
+  name = "coderev-network"
+}
+
+resource "yandex_vpc_subnet" "subnet" {
+  name           = "coderev-subnet"
+  zone           = var.default_zone
+  network_id     = yandex_vpc_network.network.id
+  v4_cidr_blocks = [var.subnet_cidr]
+}
+
+# ===== Service Account for Kubernetes =====
+resource "yandex_iam_service_account" "k8s_sa" {
+  name        = "coderev-k8s-sa"
+  description = "Service account for coderev Kubernetes cluster"
+}
+
+resource "yandex_resourcemanager_folder_iam_binding" "k8s_sa_binding" {
+  folder_id = var.folder_id
+  role      = "editor"
+
+  members = [
+    "serviceAccount:${yandex_iam_service_account.k8s_sa.id}"
+  ]
+}
+
+# ===== Kubernetes Cluster =====
+resource "yandex_kubernetes_cluster" "coderev_cluster" {
+  name       = "coderev-cluster"
+  network_id = yandex_vpc_network.network.id
+
+  master {
+    version   = var.k8s_version
+    public_ip = true
+
+    zonal {
+      zone      = var.default_zone
+      subnet_id = yandex_vpc_subnet.subnet.id
+    }
+  }
+
+  service_account_id      = yandex_iam_service_account.k8s_sa.id
+  node_service_account_id = yandex_iam_service_account.k8s_sa.id
+
+  release_channel = "RAPID"
+}
+
+# ===== Kubernetes Node Group =====
+resource "yandex_kubernetes_node_group" "coderev_nodes" {
+  cluster_id = yandex_kubernetes_cluster.coderev_cluster.id
+  name       = "coderev-node-group"
+  node_count = 2
+  version    = var.k8s_version
+
+  allocation_policy {
+    location {
+      zone = var.default_zone
+    }
+  }
+
+  instance_template {
+    platform_id = "standard-v3"
+
+    resources {
+      memory = 4
+      cores  = 2
+    }
+
+    boot_disk {
+      type = "network-ssd"
+      size = 50
+    }
+
+    network_interface {
+      subnet_ids = [yandex_vpc_subnet.subnet.id]
+      nat        = true
+    }
+
+    metadata = {
+      ssh-keys = "ubuntu:${file(var.ssh_public_key_path)}"
+    }
+  }
+}
+
+# ===== Container Registry (если используется) =====
+resource "yandex_container_registry" "coderev_registry" {
+  name = "coderev-registry"
+}
