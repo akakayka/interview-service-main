@@ -35,7 +35,8 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
             max={!collapsed}
             onClick={onClick}
         >
-            <item.Icon />
+            {/* <item.Icon /> */}
+            <img src={item.Icon} />
             {!isCurrentLocation && (
                 <Text
                     text={item.text}

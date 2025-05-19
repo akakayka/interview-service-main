@@ -9,7 +9,7 @@ import { getUserRole, getUserSession, userActions } from 'entities/User';
 import { useSelector } from 'react-redux';
 import { getSidebarCollapsed, getSidebarVisible } from '../../model/selectors/sidebarSelectors.ts';
 import { Text } from 'shared/ui/Text/Text.tsx';
-import LogoutIcon from 'shared/assets/icons/logout.svg';
+// import LogoutIcon from 'shared/assets/icons/logout.svg';
 import { SidebarItemType } from '../../model/types/sidebar.ts';
 import { RoutePath } from 'app/providers/router/routeConfig.tsx';
 import { mapRoleToString } from '../../consts/mapRoleToString.ts';
@@ -47,7 +47,8 @@ export const Sidebar = memo((props: SidebarProps) => {
 
     const logoutButton: SidebarItemType = {
         path: RoutePath.login,
-        Icon: LogoutIcon,
+        // Icon: LogoutIcon,
+        Icon: "https://storage.yandexcloud.net/project-static/logout.svg",
         text: 'Выход',
     };
 

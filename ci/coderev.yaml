@@ -28,7 +28,7 @@ spec:
           resources:
             limits:
               cpu: "1"
-              memory: "512Mi"
+              memory: "512Mi"        
 
 # ---------- Backend Service ----------
 ---
@@ -68,9 +68,12 @@ spec:
           image: cr.yandex/crpbfq065u1f2cdnvqee/frontend:latest
           ports:
             - containerPort: 80
-          env: # <-- Добавляем эту секцию
+          env:
             - name: VITE_API_URL
               value: "/api"
+          envFrom:
+            - configMapRef:
+                name: frontend-env
           resources:
             limits:
               cpu: "0.5"
@@ -105,7 +108,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-    nginx.org/websocket-services: "backend-service"  # Указываем сервис бэкенда
+    nginx.org/websocket-services: "backend-service"
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection "upgrade";
@@ -125,10 +128,10 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: backend-service  # Совпадает с Service.metadata.name
+                name: backend-service
                 port:
                   number: 5001
-          - path: /signalrtc  # Точное соответствие nginx.conf
+          - path: /signalrtc
             pathType: Prefix
             backend:
               service:

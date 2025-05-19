@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-env
+  namespace: coderev
+data:
+  FRONTEND_URL: "http://$(INGRESS_HOST)"

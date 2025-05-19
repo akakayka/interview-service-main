@@ -41,7 +41,7 @@ export const createInvite = createAsyncThunk<string, void, ThunkConfig<string>>(
 
             // return `https://localhost:5001/auth/register/${response.data.invitation}`;
             // return `http://localhost:5173/auth/register/${response.data.invitation}`;
-            return `${UrlRoutes.client}auth/register/${response.data.invitation}`;
+            return `${import.meta.url.split("/assets/")[0]}${UrlRoutes.client}auth/register/${response.data.invitation}`;
         } catch (e) {
             console.log(e);
             return rejectWithValue('error');

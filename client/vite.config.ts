@@ -37,6 +37,6 @@ export default defineConfig({
         }
     },
     define: {
-        'process.env.API_BASE_URL': JSON.stringify('/api')
+        'process.env.API_BASE_URL': JSON.stringify('/api'),
     }
 });

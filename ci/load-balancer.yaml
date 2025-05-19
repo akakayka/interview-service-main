@@ -5,10 +5,10 @@ metadata:
   namespace: coderev
 spec:
   selector:
-    app: frontend  # Совпадает с Deployment
+    app: frontend 
   ports:
     - name: https
       port: 80
-      targetPort: 80  # Фронтенд слушает 80 порт
+      targetPort: 80
       protocol: TCP
   type: LoadBalancer

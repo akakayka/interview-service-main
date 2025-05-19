@@ -12,8 +12,8 @@ import cls from './Input.module.scss';
 import { HStack, VStack } from '../Stack';
 import { Text } from '../Text/Text.tsx';
 import { ValidationError } from 'shared/lib/hooks/useValidation/useValidation.ts';
-import EyeIcon from 'shared/assets/icons/eye.svg';
-import EyeOffIcon from 'shared/assets/icons/eye-off.svg';
+// import EyeIcon from 'shared/assets/icons/eye.svg';
+// import EyeOffIcon from 'shared/assets/icons/eye-off.svg';
 import { Button } from '../Button/Button.tsx';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
@@ -107,7 +107,8 @@ export const Input = memo((props: InputProps) => {
                             className={cls.eyeIcon}
                             onClick={() => setView(true)}
                         >
-                            <EyeIcon />
+                            {/* <EyeIcon /> */}
+                            <img src="https://storage.yandexcloud.net/project-static/eye.svg" />
                         </Button>
                     )}
                     {view && (
@@ -116,7 +117,8 @@ export const Input = memo((props: InputProps) => {
                             className={cls.eyeOffIcon}
                             onClick={() => setView(false)}
                         >
-                            <EyeOffIcon />
+                            {/* <EyeOffIcon /> */}
+                            <img src="https://storage.yandexcloud.net/project-static/eye-off.svg" />
                         </Button>
                     )}
                 </>

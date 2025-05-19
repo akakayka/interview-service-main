@@ -102,6 +102,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
                         label={'Почта'}
                         value={email}
                         onChange={onChangeEmail}
+                        type={"email"}
                         error={{
                             isEmail: emailError ? 'Некорректный адрес эл. почты' : undefined,
                             isEmpty: isEmptyError ? 'Поле не должно быть пустым' : undefined,
