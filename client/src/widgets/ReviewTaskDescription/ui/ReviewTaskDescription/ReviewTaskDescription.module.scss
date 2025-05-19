@@ -1,0 +1,65 @@
+.ReviewTaskDescription {
+    padding: 63px 32px 40px;
+    border-radius: 12px;
+    background: var(--neutral-900);
+    grid-column: 1;
+    width: 100%;
+    overflow-y: auto;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    position: relative;
+}
+
+.language {
+    background: var(--success-600);
+    padding: 4px 24px;
+    border-radius: 16px;
+}
+
+.tab {
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--neutral-200);
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+
+    &:hover {
+        background: var(--neutral-700);
+    }
+}
+
+.selected {
+    background: var(--primary-800);
+    pointer-events: none;
+
+    &:hover {
+        background: var(--primary-800);
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #F5F5F5;
+    width: 100%;
+    position: absolute;
+    height: 47px;
+    top: 0;
+    left: 0;
+    padding: 8px 24px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.buttonText p {
+    cursor: pointer;
+}
+
+.content {
+    height: 100%;
+    overflow-y: auto;
+}

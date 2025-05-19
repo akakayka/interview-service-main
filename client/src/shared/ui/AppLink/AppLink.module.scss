@@ -1,0 +1,38 @@
+.normal {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 16px;
+    background: var(--bg-color-secondary);
+    color: var(--primary-color);
+
+    &:hover {
+        background: var(--hover-color);
+    }
+}
+
+.focused {
+    background: var(--focused-color);
+    pointer-events: none;
+
+    &:hover {
+        background: var(--focused-color);
+    }
+}
+
+.max {
+    width: 100%;
+}
+
+.clear {
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,27 @@
+.TasksList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 340px);
+    grid-auto-flow: dense;
+    width: 100%;
+    grid-gap: 16px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.header {
+    top: 0;
+}
+
+.container {
+    width: 100%;
+    overflow: auto;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+}

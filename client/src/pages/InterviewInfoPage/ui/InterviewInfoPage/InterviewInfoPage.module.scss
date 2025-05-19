@@ -1,0 +1,67 @@
+.InterviewInfoPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 15% 75%;
+    grid-row-gap: 16px;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    background: var(--neutral-900);
+    height: 100%;
+}
+
+.candidateInfo {
+    grid-row: 2;
+}
+
+.interviewInfo {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+}
+
+.info {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid var(--neutral-700);
+    padding: 12px 0;
+}
+
+.title {
+    border-bottom: 2px solid var(--neutral-700);
+    padding: 8px 16px;
+}
+
+.dates {
+    padding: 0 16px;
+}
+
+.date {
+    max-width: 403px;
+    white-space: nowrap;
+}
+
+.date p {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.comments {
+    padding: 0 16px 12px;
+}
+
+.tasks {
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.tasksTitle {
+    border-bottom: 2px solid var(--neutral-700);
+    padding: 24px 16px;
+}

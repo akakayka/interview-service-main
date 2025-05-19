@@ -1,0 +1,65 @@
+@import "reset";
+@import "variables/global";
+@import "themes/light";
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.app,
+.app_modal {
+    color: var(--primary-color);
+    font: var(--font-md);
+    min-height: 100vh;
+}
+
+.app {
+    background: var(--bg-color);
+}
+
+.content-page {
+    display: flex;
+}
+
+.monaco-editor, .overflow-guard {
+    border-radius: 0 0 12px 12px;
+}
+
+.CodeMirror {
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    background-color: var(--neutral-900);
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    height: 95%;
+}
+
+.react-codemirror2 {
+    height: 100%;
+}
+
+.CodeMirror-gutter {
+    background: var(--neutral-900);
+    border-right: none;
+}
+
+.CodeMirror-linenumber {
+    font-family: var(--font-family-main);
+    color: #A3A3A3;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+    margin-right: 5px;
+}
+
+.CodeMirror-line {
+    padding: 8px;
+}
+
+.CodeMirror pre.CodeMirror-line {
+    padding: 0 16px;
+    letter-spacing: 0.01em;
+    font-family: "JetBrains Mono", monospace;
+}

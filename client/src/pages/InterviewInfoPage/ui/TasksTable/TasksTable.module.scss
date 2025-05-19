@@ -1,0 +1,13 @@
+.TasksTable {
+    width: 100%;
+    height: calc(100% - 78px);
+}
+
+.items {
+    overflow-y: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}

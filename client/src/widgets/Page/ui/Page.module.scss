@@ -1,0 +1,12 @@
+.Page {
+    flex-grow: 1;
+    padding: 40px;
+    height: 100vh;
+    overflow-y: auto;
+    flex-shrink: 100;
+}
+
+.title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}

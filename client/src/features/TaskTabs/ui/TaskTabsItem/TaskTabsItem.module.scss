@@ -1,0 +1,30 @@
+.TaskTabsItem {
+
+}
+
+.selected {
+    background: var(--neutral-800);
+    pointer-events: none;
+    border: 2px solid var(--primary-500);
+
+    &:hover {
+        background: var(--neutral-800);
+    }
+}
+
+.readonly {
+    background: var(--neutral-700);
+    pointer-events: none;
+
+    &:hover {
+        background: var(--neutral-700);
+    }
+}
+
+.readonly.selected {
+    background: var(--neutral-800);
+
+    &:hover {
+        background: var(--neutral-800);
+    }
+}

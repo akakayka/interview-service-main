@@ -1,0 +1,65 @@
+.Select {
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.error {
+    border: 1px solid var(--failure-300);
+}
+
+.Select[data-is-active="true"] .placeholder {
+    border: 1px solid #0022f5;
+}
+
+.arrow {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+    margin-top: -12px;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 56px;
+    padding: 16px 32px;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    background: var(--neutral-700);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.placeholder[data-selected="true"] {
+    color: rgb(0, 0, 0);
+}
+
+.selectWrapper[data-is-active="true"] .arrow {
+    transform: rotate(180deg);
+    margin-top: -6px;
+}
+
+.select {
+    display: grid;
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: var(--neutral-900);
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 16px;
+}
+

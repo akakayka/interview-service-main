@@ -1,0 +1,152 @@
+.Button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-wrap: nowrap;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.max {
+    width: 100%;
+}
+
+.small {
+    border-radius: 8px;
+    padding: 8px 16px;
+    height: 36px;
+    background: var(--neutral-700);
+
+    &:hover {
+        background: var(--neutral-800);
+    }
+}
+
+.big {
+    border-radius: 8px;
+    padding: 16px 24px;
+    height: 56px;
+
+    &.primary {
+        background: var(--primary-200);
+
+        &:hover {
+            background: var(--primary-300);
+        }
+
+        &:active {
+            background: var(--primary-100);
+        }
+
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+
+            &:active {
+                background: var(--primary-200);
+            }
+
+            &:hover {
+                background: var(--primary-200);
+            }
+        }
+    }
+
+    &.secondary {
+        background: var(--primary-700);
+
+        &:hover {
+            background: var(--primary-800);
+        }
+
+        &:active {
+            background: var(--primary-600);
+        }
+
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+
+            &:active {
+                background: var(--primary-700);
+            }
+
+            &:hover {
+                background: var(--primary-700);
+            }
+        }
+    }
+
+    &.green {
+        background: var(--success-300);
+
+        &:hover {
+            background: var(--success-400);
+        }
+
+        &:active {
+            background: var(--success-100);
+        }
+
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+
+            &:active {
+                background: var(--success-300);
+            }
+
+            &:hover {
+                background: var(--success-300);
+            }
+        }
+    }
+
+    &.clear {
+        background: none;
+        padding: 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: none;
+        margin: 0;
+        height: auto;
+        width: auto;
+
+        &:hover {
+            background: none;
+            opacity: 0.9;
+        }
+
+        &:active {
+            background: none;
+            opacity: 0.8;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+        }
+    }
+
+    &.white {
+        background: var(--neutral-700);
+
+        &:hover {
+            background: var(--neutral-900);
+        }
+
+        &:active {
+            background: var(--neutral-600);
+        }
+    }
+
+}
+
+.square {
+    height: 56px;
+    width: 56px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

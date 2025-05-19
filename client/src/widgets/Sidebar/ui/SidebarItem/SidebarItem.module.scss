@@ -1,0 +1,17 @@
+.SidebarItem {
+
+}
+
+.collapsed {
+    .link {
+        display: none;
+    }
+}
+
+.focused {
+    background: var(--focused-color);
+
+    &:hover {
+        background: var(--focused-color);
+    }
+}

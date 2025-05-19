@@ -1,0 +1,24 @@
+.CandidateInterviewsPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr 3fr;
+    grid-row-gap: 16px;
+}
+
+.wrapperCandidates {
+    grid-column: 1/-1;
+    grid-row: 3;
+    padding: 32px 24px;
+    border-radius: 12px;
+    background: var(--bg-color-secondary);
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.wrapperMeetings {
+    grid-column: 1/-1;
+    grid-row: 2;
+    padding: 32px 24px;
+    border-radius: 12px;
+    background: var(--bg-color-secondary);
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}

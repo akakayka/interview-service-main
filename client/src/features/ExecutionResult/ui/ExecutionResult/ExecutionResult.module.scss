@@ -1,0 +1,45 @@
+.ExecutionResult {
+    width: 100%;
+    background: var(--neutral-900);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    overflow-y: auto;
+}
+
+.tabs {
+    border-bottom: 2px solid #F5F5F5;
+    padding: 16px 24px;
+}
+
+.tab {
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--neutral-200);
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+
+    &:hover {
+        background: var(--neutral-700);
+    }
+}
+
+.selected {
+    background: var(--primary-800);
+    color: var(--primary-200);
+    pointer-events: none;
+
+    &:hover {
+        background: var(--primary-800);
+    }
+}
+
+.output {
+    padding: 16px 24px;
+}
+
+.loading {
+    justify-content: center;
+    align-items: center;
+}

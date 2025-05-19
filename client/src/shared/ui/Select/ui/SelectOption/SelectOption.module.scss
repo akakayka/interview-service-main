@@ -1,0 +1,23 @@
+.SelectOption {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45px;
+    padding: 32px;
+    border: 1px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(0, 0, 0);
+}
+
+.SelectOption[aria-selected="true"] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.SelectOption:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

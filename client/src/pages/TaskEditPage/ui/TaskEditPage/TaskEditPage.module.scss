@@ -1,0 +1,71 @@
+.TaskEditPage {
+    display: grid;
+    grid-template-rows: 50px auto 30px 500px;
+    grid-auto-flow: row;
+    grid-template-columns: 55% 45%;
+    grid-column-gap: 8px;
+    grid-row-gap: 16px;
+}
+
+.form {
+    grid-column: 1/-1;
+    grid-row: 2;
+    border-radius: 12px;
+    padding: 24px 32px 40px 32px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    background: var(--neutral-900);
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-template-rows: 100px 1fr;
+    margin-bottom: -16px;
+}
+
+.container {
+    grid-column: 1/-1;
+}
+
+.input {
+    max-width: 80%;
+}
+
+.select {
+    flex-shrink: 0;
+}
+
+.label {
+    margin-bottom: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    justify-self: end;
+    align-self: end;
+    height: 56px;
+    margin-bottom: 8px;
+}
+
+.textarea {
+    grid-column: 1/-1;
+}
+
+.codeLabel {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.testsCodeLabel {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.codeEditor {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.testsEditor {
+    grid-column: 2;
+    grid-row: 4;
+}

@@ -1,0 +1,190 @@
+.wrap {
+    .text {
+        white-space: wrap;
+        text-wrap: wrap;
+        word-break: break-all;
+    }
+}
+
+.nowrap {
+    .text {
+        text-wrap: nowrap;
+        white-space: nowrap;
+        word-break: break-all;
+    }
+}
+
+.primary {
+    .text {
+        color: var(--primary-color);
+    }
+}
+
+.secondary {
+    .text {
+        color: var(--neutral-50);
+    }
+}
+
+.gray {
+    .text {
+        color: var(--neutral-200);
+    }
+}
+
+.error {
+    .text {
+        color: var(--failure-400);
+    }
+}
+
+.white {
+    .text {
+        color: var(--primary-900);
+    }
+}
+
+.accent {
+    .text {
+        color: var(--primary-100);
+    }
+}
+
+.green {
+    .text {
+        color: var(--success-100);
+    }
+}
+
+.dark_red {
+    .text {
+        color: var(--failure-100);
+    }
+}
+
+.right {
+    .text {
+        text-align: right;
+    }
+}
+
+.left {
+    .text {
+        text-align: left;
+    }
+}
+
+.center {
+    .text {
+        text-align: center;
+    }
+}
+
+.display_2xl {
+    .text {
+        font: var(--font-display-2xl);
+    }
+}
+
+.display_xl {
+    .text {
+        font: var(--font-display-xl);
+    }
+}
+
+.display_lg {
+    .text {
+        font: var(--font-display-lg);
+    }
+}
+
+.display_md {
+    .text {
+        font: var(--font-display-md);
+    }
+}
+
+.display_sm {
+    .text {
+        font: var(--font-display-sm);
+    }
+}
+
+.display_xs {
+    .text {
+        font: var(--font-display-xs);
+    }
+}
+
+.xl {
+    .text {
+        font: var(--font-xl);
+    }
+}
+
+.lg {
+    .text {
+        font: var(--font-lg);
+    }
+}
+
+.md {
+    .text {
+        font: var(--font-md);
+    }
+}
+
+.sm {
+    .text {
+        font: var(--font-sm);
+    }
+}
+
+.xs {
+    .text {
+        font: var(--font-xs);
+    }
+}
+
+.regular {
+    .text {
+        font-weight: 400;
+    }
+}
+
+.medium {
+    .text {
+        font-weight: 500;
+    }
+}
+
+.bold {
+    .text {
+        font-weight: 700;
+    }
+}
+
+.semibold {
+    .text {
+        font-weight: 600;
+    }
+}
+
+.inter {
+    .text {
+        font-family: var(--font-family-main);
+    }
+}
+
+.raleway {
+    .text {
+        font-family: var(--second-family);
+    }
+}
+
+.montserrat {
+    .text {
+        font-family: var(--third-family);
+    }
+}
+

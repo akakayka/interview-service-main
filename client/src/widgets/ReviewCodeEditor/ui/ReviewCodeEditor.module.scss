@@ -1,0 +1,27 @@
+.ReviewCodeEditor {
+    height: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 90% 66px;
+    grid-column-gap: 16px;
+    grid-template-rows: 600px 200px;
+    grid-row-gap: 16px;
+}
+
+.editor {
+    grid-column: 1;
+    width: 100%;
+    grid-row: 1;
+}
+
+.tasks {
+    grid-column: 2;
+}
+
+.result {
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+    margin-top: 32px;
+}
+

@@ -1,0 +1,39 @@
+.Sidebar {
+    height: 100vh;
+    flex-shrink: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-color-secondary);
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.07);
+    transition: width 0.3s;
+}
+
+.logo {
+    border-bottom: 2px solid var(--border-color);
+    padding: 28px 16px;
+}
+
+.title {
+    white-space: nowrap;
+}
+
+.items {
+    padding: 28px 16px;
+}
+
+.userData {
+    position: absolute;
+    bottom: 32px;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .userNames {
+        display: none;
+    }
+}
+
+.logout span {
+    color: var(--failure-400);
+}

@@ -1,0 +1,30 @@
+.TaskDetailsPage {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-column-gap: 16px;
+    grid-template-rows: 50px 45% 45%;
+    grid-row-gap: 16px;
+}
+
+.info {
+    grid-column: 1/-1;
+    grid-row: 2;
+    border-radius: 12px;
+    padding: 24px 32px 40px 32px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    background: var(--neutral-900);
+}
+
+.descriptionContainer {
+    height: 100%;
+}
+
+.codeEditor {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.testsEditor {
+    grid-column: 2;
+    grid-row: 3;
+}

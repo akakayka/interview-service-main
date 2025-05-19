@@ -1,0 +1,31 @@
+.CandidatesListItem {
+    background: var(--primary-800);
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+.status {
+    border-radius: 8px;
+    padding: 4px 16px;
+}
+
+.in_progress {
+    background: var(--warning-600);
+    color: var(--warning-100);
+    font-weight: 600;
+}
+
+.checked {
+    background: var(--success-600);
+    color: var(--success-100);
+    font-weight: 600;
+}
+
+.unchecked {
+    background: var(--failure-700);
+    color: var(--failure-100);
+    font-weight: 600;
+}

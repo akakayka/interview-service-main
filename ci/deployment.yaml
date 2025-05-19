@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coderev-deployment
+  namespace: coderev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: coderev
+  template:
+    metadata:
+      labels:
+        project: coderev
+    spec:
+      containers:
+        - name: coderev
+          image: hub.66bit.ru/urfu-2024/interviewservice/interview-service:latest
+          ports:
+            - containerPort: 5001
+      imagePullSecrets:
+        - name: coderevcred

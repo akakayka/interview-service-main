@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
+:root {
+    // font
+    --font-family-main: "Inter", sans-serif;
+    --second-family: "Raleway", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+
+    --font-size-xs: 12px;
+    --font-line-xs: 18px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
+    --font-size-sm: 14px;
+    --font-line-sm: 20px;
+    --font-sm: var(--font-size-sm) / var(--font-line-sm) var(--font-family-main);
+
+    --font-size-md: 16px;
+    --font-line-md: 24px;
+    --font-md: var(--font-size-md) / var(--font-line-md) var(--font-family-main);
+
+    --font-size-lg: 18px;
+    --font-line-lg: 28px;
+    --font-lg: var(--font-size-lg) / var(--font-line-lg) var(--font-family-main);
+
+    --font-size-xl: 20px;
+    --font-line-xl: 30px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    --font-size-display-xs: 24px;
+    --font-line-display-xs: 32px;
+    --font-display-xs: var(--font-size-display-xs) / var(--font-line-display-xs) var(--font-family-main);
+
+    --font-size-display-sm: 30px;
+    --font-line-display-sm: 38px;
+    --font-display-sm: var(--font-size-display-sm) / var(--font-line-display-sm) var(--font-family-main);
+
+    --font-size-display-md: 36px;
+    --font-line-display-md: 44px;
+    --font-display-md: var(--font-size-display-md) / var(--font-line-display-md) var(--font-family-main);
+
+    --font-size-display-lg: 48px;
+    --font-line-display-lg: 60px;
+    --font-display-lg: var(--font-size-display-lg) / var(--font-line-display-lg) var(--font-family-main);
+
+    --font-size-display-xl: 60px;
+    --font-line-display-xl: 72px;
+    --font-display-xl: var(--font-size-display-xl) / var(--font-line-display-xl) var(--font-family-main);
+
+    --font-size-display-2xl: 72px;
+    --font-line-display-2xl: 90px;
+    --font-display-2xl: var(--font-size-display-2xl) / var(--font-line-display-2xl) var(--font-family-main);
+
+    // card
+    --card-width-size-sm: 640px;
+    --card-height-size-sm: 360px;
+
+    --card-width-size-md: 764px;
+    --card-height-size-md: 432px;
+
+    --card-width-size-lg: 1024px;
+    --card-height-size-lg: 576px;
+
+    --card-width-size-xl: 1280px;
+    --card-height-size-xl: 720px;
+
+    // button
+    --button-square-size: 48px;
+
+    // sidebar
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 100px;
+
+    --modal-z-index: 10000;
+}

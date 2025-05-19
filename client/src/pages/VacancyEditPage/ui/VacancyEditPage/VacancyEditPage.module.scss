@@ -1,0 +1,82 @@
+.VacancyEditPage {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    grid-template-rows: 50px 1fr 250px;
+    grid-column-gap: 32px;
+    grid-row-gap: 16px;
+}
+
+.CreateInterviewPage h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.form {
+    grid-column: 1;
+    background: var(--neutral-900);
+    border-radius: 12px;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 56px;
+    grid-row-gap: 16px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    height: min-content;
+}
+
+.inputs {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.addTasks {
+    grid-column: 2;
+    grid-row: 2/-1;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    background: var(--neutral-900);
+    border-radius: 12px;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tasksList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-auto-flow: dense;
+    width: 100%;
+    grid-gap: 16px;
+    overflow: auto;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.button {
+    max-width: 256px;
+}
+
+.timeInput {
+    background: var(--neutral-700);
+    border-radius: 8px;
+    padding: 12px;
+    border: none;
+    font: var(--font-md);
+    color: var(--neutral-200);
+}
