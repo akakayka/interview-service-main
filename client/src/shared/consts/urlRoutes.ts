@@ -1,9 +1,9 @@
 export enum UrlRoutes {
     // Для production (Kubernetes)
-    compiler = '/',
+    compiler = '/api/',
     user = '/api',
     client = '/',
-    tracker = '/api/v1.0/tracker',
+    tracker = '/v1.0/tracker/',
     signal = '/signalrtc',
     notification = '/notificationHub',
 
