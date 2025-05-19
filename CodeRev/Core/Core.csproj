@@ -32,4 +32,10 @@
     <ProjectReference Include="..\UserService\UserService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".mongodb\root.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

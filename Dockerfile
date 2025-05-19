@@ -1,6 +1,10 @@
 ﻿
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS publish
 WORKDIR /src
+
+COPY root.crt /usr/local/share/ca-certificates/yandex-mdb-ca.crt
+RUN update-ca-certificates
+
 COPY ./CodeRev/Core ./CodeRev/Core
 COPY ./CodeRev/CompilerService ./CodeRev/CompilerService
 COPY ./CodeRev/TrackerService ./CodeRev/TrackerService
@@ -20,6 +24,7 @@ ENV ASPNETCORE_URLS=http://*:5001/
 ENV DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
 WORKDIR /app
 COPY --from=publish /app/publish ./Core
+COPY root.crt /certs/
 WORKDIR /app/Core
 ENV ASPNETCORE_ENVIRONMENT=Development
 ENTRYPOINT ["dotnet", "Core.dll"]

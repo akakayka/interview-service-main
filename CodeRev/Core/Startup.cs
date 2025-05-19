@@ -2,7 +2,6 @@ using CompilerService.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,7 +41,6 @@ namespace Core
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment Environment { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             ConfigureUserService(services);
@@ -110,18 +108,6 @@ namespace Core
                 endpoints.MapHub<NotificationHub>("/notificationHub");
                 endpoints.MapControllers();
             });
-
-            // app.UseStaticFiles();
-            
-            // app.UseSpaStaticFiles();
-            //
-            //
-            // app.UseSpa(spa =>
-            // {
-            //     spa.Options.SourcePath = "../../client";
-            //     spa.UseReactDevelopmentServer(npmScript: "start");
-            // });
-
         }
 
         private void ConfigureCompilerService(IServiceCollection services)
@@ -143,7 +129,6 @@ namespace Core
             services.AddTransient<IRepository, Repository>();
             services.AddTransient<ISerializer, Serializer>();
             services.AddTransient<IDeserializer, Deserializer>();
-            // services.AddApiVersioning(config => { config.ApiVersionReader = new HeaderApiVersionReader("api-version"); });
         }
 
         private void ConfigureUserService(IServiceCollection services)

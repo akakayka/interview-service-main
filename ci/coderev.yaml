@@ -23,6 +23,8 @@ spec:
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: "Production"
+            - name: MONGODB_SSL_CA_FILE
+              value: "/certs/root.crt"
           resources:
             limits:
               cpu: "1"
