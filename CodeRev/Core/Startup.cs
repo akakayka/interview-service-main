@@ -133,7 +133,9 @@ namespace Core
 
         private void ConfigureUserService(IServiceCollection services)
         {
-            var postgresConnectionString = Configuration.GetConnectionString($"postgres{Environment.EnvironmentName}");
+            // var postgresConnectionString = Configuration.GetConnectionString($"postgres{Environment.EnvironmentName}");
+            var actualHost = Configuration["POSTGRESQL_HOST"];
+            var postgresConnectionString = $"User ID=postgresql;Password=postgresql;Host={actualHost};Port=6432;Database=CodeRev;Pooling=true;SSL Mode=Require;Trust Server Certificate=true";
             services.AddDbContext<DataContext>(options => options.UseNpgsql(postgresConnectionString,
                 assembly => assembly.MigrationsAssembly("UserService.DAL")));
 

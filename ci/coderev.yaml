@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: cr.yandex/crpbfq065u1f2cdnvqee/backend:latest
+          image: cr.yandex/${CLUSTER_HOST}/backend:latest
           ports:
             - containerPort: 5001
           env:
@@ -25,6 +25,9 @@ spec:
               value: "Production"
             - name: MONGODB_SSL_CA_FILE
               value: "/certs/root.crt"
+            - name: POSTGRESQL_HOST
+              value: ${POSTGRESQL_HOST}
+
           resources:
             limits:
               cpu: "1"
@@ -65,7 +68,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: cr.yandex/crpbfq065u1f2cdnvqee/frontend:latest
+          image: cr.yandex/${CLUSTER_HOST}/frontend:latest
           ports:
             - containerPort: 80
           env:

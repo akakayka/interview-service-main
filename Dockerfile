@@ -1,4 +1,5 @@
-﻿
+﻿ARG POSTGRESQL_HOST="default_host_if_not_set"
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS publish
 WORKDIR /src
 
@@ -18,7 +19,8 @@ RUN dotnet restore "Core.csproj"
 RUN dotnet publish "Core.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
-
+ARG POSTGRESQL_HOST="default_host_if_not_set"
+RUN echo "Using PostgreSQL host: $POSTGRESQL_HOST"
 EXPOSE 5001
 ENV ASPNETCORE_URLS=http://*:5001/
 ENV DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
@@ -27,4 +29,5 @@ COPY --from=publish /app/publish ./Core
 COPY root.crt /certs/
 WORKDIR /app/Core
 ENV ASPNETCORE_ENVIRONMENT=Development
+ENV POSTGRESQL_HOST=$POSTGRESQL_HOST
 ENTRYPOINT ["dotnet", "Core.dll"]
